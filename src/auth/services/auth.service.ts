@@ -39,11 +39,11 @@ export class AuthService {
     );
 
     return {
-      id: buscaUsuario.id,
-      nome: buscaUsuario.nome,
+      id: buscaUsuario?.id,
+      nome: buscaUsuario?.nome,
       usuario: usuarioLogin.usuario,
       senha: '',
-      foto: buscaUsuario.foto,
+      foto: buscaUsuario?.foto,
       token: `Bearer ${this.jwtService.sign(payload)}`,
     };
   }
